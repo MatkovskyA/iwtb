@@ -1,13 +1,16 @@
 <script setup lang="ts">
-
+  import HeaderApp from './components/header/HeaderApp.vue';
+  import FooterApp from './components/footer/FooterApp.vue';
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="flex flex-col min-h-screen">
+    <HeaderApp />
+    <main class="flex-grow">
+      <router-view />
+    </main>
+    <FooterApp />
+  </div>
 </template>
 
 <style scoped></style>
